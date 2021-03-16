@@ -2,6 +2,7 @@
   "name": "neutrino-storybook-emotion",
   "version": "1.0.0",
   "main": "index.js",
+  "private": true,
   "license": "MIT",
   "peerDependencies": {
     "prop-types": "^15",
@@ -14,10 +15,12 @@
     "test": "jest",
     "lint": "eslint --cache --format codeframe --ext mjs,jsx,js src test",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "format": "pnpx prettier --write ."
   },
   "devDependencies": {
     "@babel/core": "^7.13.10",
+    "@emotion/babel-plugin": "^11.2.0",
     "@neutrinojs/jest": "^9.5.0",
     "@neutrinojs/react-components": "^9.5.0",
     "@neutrinojs/standardjs": "^9.5.0",
@@ -26,10 +29,12 @@
     "@storybook/addon-links": "^6.1.21",
     "@storybook/react": "^6.1.21",
     "babel-loader": "^8.2.2",
+    "babel-preset-react": "^6.24.1",
     "eslint": "^7",
     "jest": "^26",
     "neutrino": "^9.5.0",
-    "neutrino-preset-storybook-react": "^1.0.2",
+    "neutrino-preset-storybook-react": "file://../../github/neutrino-storybook/packages/preset-storybook-react/",
+    "prettier": "2.2.1",
     "prop-types": "^15",
     "react": "^16",
     "react-dom": "^16",
@@ -40,5 +45,7 @@
   "resolutions": {
     "@storybook/react": "^6.1.21"
   },
-  "dependencies": {}
+  "dependencies": {
+    "@emotion/react": "^11.1.5"
+  }
 }

@@ -10,7 +10,11 @@ export default function Example() {
   return (
     <div>
       <p>{message}</p>
-      <Button onClick={() => setCount(count + 1)} label="Click me" primary={true}></Button>
+      <Button
+        onClick={() => setCount(count + 1)}
+        label="Click me"
+        primary={true}
+      ></Button>
     </div>
   );
 }
